@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>WaveFit</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="recursos/logo2.png" type="image/x-icon">
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/acceso.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/media-queries_acceso.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Cabecera -->
+    <header>
+        <nav class="header-nav">
+            <!-- Logo + Inicio-->
+            <div class="logo">
+                <h1 class="antes"><a href="index_en.html">WaveFit</a></h1>
+                <h1 class="despues"><a href="index_en.html">WF</a></h1>
+            </div>
+            <!-- Selector de idioma - mantiene el hash para preservar la sección actual -->
+            <div class="ace-idio">
+                <div class="idioma">
+                    <a href="acceso.html" onclick="this.href = this.href + location.hash">ES</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido principal - el ID registro controla la visualización de secciones -->
+    <main id="registro">
+        <!-- Sección de inicio de sesión - visible por defecto -->
+        <section id="seccion-acceso" class="seccion">
+            <!-- Imagen decorativa lado izquierdo -->
+            <div class="imagen">
+                <img src="recursos/FotoInicio.jpg" alt="Person making farmers carry" loading="lazy">
+            </div>
+            <!-- Contenedor del formulario de acceso -->
+            <div class="contenido">
+                <h2>Login</h2>
+                <!-- Formulario de inicio de sesión -->
+                <form class="form-acceso" action="#" method="post">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="My email" required
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|es|net|org|edu|gov)$" />
+                    <label for="contrasena">Password:</label>
+                    <input type="password" id="contrasena" name="contrasena" placeholder="My password" required>
+                    <button type="submit" class="boton-acceder">Login</button>
+                </form>
+                <!-- Enlace para cambiar a la sección de registro -->
+                <p>Don't have an account? <a href="#registro">Sign up here</a></p>
+            </div>
+        </section>
+
+        <!-- Sección de registro - oculta por defecto, se muestra al hacer clic en "Regístrate aquí" -->
+        <section id="seccion-registro" class="seccion">
+            <!-- Imagen decorativa lado izquierdo -->
+            <div class="imagen2">
+                <img src="recursos/FotoCreacion.jpg" alt="Person doing back squat" loading="lazy">
+            </div>
+            <!-- Contenedor del formulario de registro -->
+            <div class="contenido">
+                <h2>Create Account</h2>
+                <!-- Formulario de registro -->
+                <form class="form-acceso" action="#" method="post">
+                    <label for="nombre">Full Name:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="My name" required>
+                    <label for="registro-email">Email:</label>
+                    <input type="email" id="registro-email" name="email" placeholder="My email" required
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|es|net|org|edu|gov)$" />
+                    <label for="nueva-contrasena">Password:</label>
+                    <input type="password" id="nueva-contrasena" name="nueva-contrasena" placeholder="My password"
+                        required>
+                    <button type="submit" class="boton-acceder">Sign Up</button>
+                </form>
+                <!-- Enlace para volver a la sección de inicio de sesión -->
+                <p>Already have an account? <a href="#seccion-acceso">Login</a></p>
+            </div>
+        </section>
+    </main>
+    <!-- Pie de página -->
+    <footer>
+        <!-- Información de copyright -->
+        <div class="copy">
+            <p>
+                WaveFit &copy; 2025. All rights reserved. Designed by
+                <a href="https://github.com/byAlexLR" target="_blank" rel="noopener">ByAlexLR</a>
+            </p>
+        </div>
+        <!-- Iconos de redes sociales -->
+        <div class="redes-footer">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/WaveFitOf" target="_blank" rel="noopener" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.x.com/WaveFitOf" target="_blank" rel="noopener" aria-label="X">
+                        <i class="fa-brands fa-x-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.tiktok.com/@WaveFitOf" target="_blank" rel="noopener" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i></a>
+                </li>
+            </ul>
+        </div>
+        <!-- Enlaces a páginas legales -->
+        <div class="terminos">
+            <p>
+                <a href="#terminos" rel="noopener">Terms and Conditions</a> |
+                <a href="#politica" rel="noopener">Privacy Policy</a> |
+                <a href="#cookies" rel="noopener">Cookie Policy</a> |
+                <a href="#accesibilidad" rel="noopener">Contact Us</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

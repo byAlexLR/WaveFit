@@ -1,0 +1,175 @@
+/* Control de visibilidad para las secciones de acceso y registro */
+#seccion-registro {
+  display: none;
+}
+
+#registro:target #seccion-acceso {
+  display: none;
+}
+
+#registro:target #seccion-registro {
+  display: flex;
+}
+
+#registro:target .contenido {
+  padding-top: 10%;
+}
+
+/* Estilos base de acceso */
+body,
+html {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+/* Configuración del contenedor principal */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  overflow: hidden;
+}
+
+/* Configuración de ambas secciones */
+.seccion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: var(--color-oscuro);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Estilos para el contenido dentro de las secciones */
+.contenido {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  color: var(--color-claro);
+  padding: 5%;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+/* Estilos para los encabezados dentro del contenido */
+.contenido h2 {
+  padding-left: 60px;
+  margin-bottom: 60px;
+}
+
+/* Estilos para los párrafos dentro del contenido */
+.contenido p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Estilos para los enlaces dentro del contenido */
+.contenido a {
+  text-decoration: none;
+  color: var(--color-claro);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contenido a:hover{
+    color: var(--color-acento);
+}
+
+/* Configuración del formulario de acceso */
+.form-acceso {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Estilos para las etiquetas del formulario */
+.form-acceso label {
+  font-family: var(--fuente-principal);
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+/* Estilos para los campos de entrada y áreas de texto */
+.form-acceso input,
+.form-acceso textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--color-oscuro);
+  border-radius: 5px;
+  background-color: var(--color-input);
+  color: var(--color-oscuro);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.form-acceso input:focus,
+.form-acceso textarea:focus {
+  background-color: var(--color-claro);
+  outline: none;
+  border-color: var(--color-acento);
+}
+
+/* Estilos para el botón de acceso */
+.form-acceso button.boton-acceder {
+  padding: 15px;
+  background-color: var(--color-acento);
+  color: var(--color-oscuro);
+  border: 1px solid var(--color-oscuro);
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.form-acceso button.boton-acceder:hover {
+  background-color: var(--color-secundario);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Configuración del contenedor de las imágenes */
+.imagen,
+.imagen2 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Estilos para las imágenes */
+.imagen img,
+.imagen2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Efecto de degradado para las imágenes */
+.imagen::after,
+.imagen2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    var(--color-oscuro) 0%,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(0, 0, 0, 0) 80%,
+    var(--color-oscuro) 100%
+  );
+}

@@ -1,0 +1,611 @@
+/* Dispostivos grandes */
+@media (min-width: 1440px) {
+  /* Menú de navegación */
+  .menu {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  /* Ajustes para la sección tarifas */
+  #tarifas {
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  .tarifas-contenedor {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+  }
+
+  .plan {
+    padding: 2rem;
+  }
+
+  /*  Ajustes para la sección entreno */
+  .contenido-entreno {
+    padding: 5rem;
+  }
+
+  /*  Ajustes para la sección contacto */
+  .form-contacto {
+    max-width: 600px;
+  }
+}
+
+/* Escritorio y portátil */
+@media (max-width: 1439px) and (min-width: 960px) {
+  /* Ajustes para las tarifas */
+  .tarifas-contenedor {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+
+  /* Ajustes para el entreno */
+  .contenido-entreno {
+    padding: 3rem;
+  }
+}
+
+/* Dispostivos medianas */
+@media (max-width: 959px) {
+  /* Menú hamburguesa */
+  .header-nav {
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    background-color: var(--color-claro);
+    position: absolute;
+    top: 52px;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .menu li {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu li a {
+    display: block;
+    padding: 8px 0;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  /* Mostrar menú cuando el checkbox está marcado */
+  #menu-toggle:checked ~ .menu {
+    display: flex;
+  }
+
+  /* Ajustes para el texto del overlay */
+  .overlay h1 span {
+    font-size: 3rem;
+  }
+
+  .texto-bienvenida-p {
+    height: 40px;
+  }
+
+  .texto-bienvenida-p > span {
+    font-size: 1.2rem;
+  }
+
+  /* Ajustes para redes sociales */
+  .redes {
+    left: 10px;
+    padding: 4px 8px;
+  }
+
+  .redes a {
+    font-size: 1rem;
+  }
+
+  /* Ajustes para footer */
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Ajustes para tipografía */
+  h2 {
+    font-size: 4rem;
+    letter-spacing: 30px;
+  }
+
+  /* Ajustes para secciones generales */
+  .secciones {
+    padding: 20px;
+  }
+
+  /* Ajustes para la sección sobre-mi */
+  #sobre-mi {
+    flex-direction: column;
+  }
+
+  .imagen {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .contenido {
+    width: 100%;
+  }
+
+  /* Ajustes para la sección tarifas */
+  #tarifas {
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  .tarifas-contenedor {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 0 15px;
+  }
+
+  .plan {
+    width: 100%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .plan:hover {
+    transform: translateY(-5px);
+  }
+
+  .plan h3 {
+    font-size: 1.8rem;
+  }
+
+  .precio {
+    font-size: 1.8rem;
+  }
+
+  /* Ajustes para la sección entreno */
+  #entreno {
+    flex-direction: column;
+    height: auto;
+    padding: 1.5rem 0 0.5rem;
+    min-height: auto;
+  }
+
+  .contenido-entreno {
+    padding: 0.5rem 1rem;
+    order: 2;
+  }
+
+  .contenido-entreno p {
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  .contenido-entreno ul li {
+    font-size: 1rem;
+  }
+
+  .contenido-entreno ul li ul li {
+    font-size: 0.9rem;
+  }
+
+  /* Ajustes para el formulario de contacto */
+  #contacto {
+    padding: 3rem 1rem;
+    min-height: auto;
+  }
+
+  #contacto h2 {
+    padding-left: 0;
+  }
+
+  .form-contacto {
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .form-contacto input,
+  .form-contacto textarea {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .form-contacto .boton-contacto {
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablets y dispositivos largos */
+@media (max-width: 768px) {
+  /* Ajustes para el texto del overlay */
+  .overlay h1 span {
+    font-size: 3.5rem;
+  }
+
+  /* Ajustes para el texto rotativo del overlay */
+  .texto-bienvenida-p > span {
+    font-size: 1.2rem;
+  }
+
+  /* Ajustes para los subtítulos */
+  h2 {
+    font-size: 2.8rem;
+    letter-spacing: 15px;
+  }
+
+  /* Ajustes para el menú */
+  .menu li a {
+    padding: 10px 0;
+  }
+
+  /* Ajustes para secciones generales */
+  .secciones {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Tablets y dispositivos largos */
+@media (min-width: 391px) and (max-width: 768px) {
+  /* Ajustes para tipografía */
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  /* Ajustes para secciones generales */
+  .secciones {
+    padding: 20px 15px;
+  }
+
+  #comunidad {
+    margin-top: 20px;
+  }
+
+  /* Ajustes para la sección tarifas */
+  #tarifas {
+    height: auto;
+    padding: 30px 0;
+    margin-top: 20px;
+  }
+
+  #tarifas > p {
+    margin: 0 25px 20px;
+    font-size: 1.1rem;
+  }
+
+  .tarifas-contenedor {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .plan {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .plan h3 {
+    font-size: 1.5rem;
+  }
+
+  .precio {
+    font-size: 1.6rem;
+  }
+
+  .descri {
+    font-size: 0.9rem;
+  }
+
+  .plan ul {
+    margin-top: 0.5rem;
+  }
+
+  .plan li {
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .botones {
+    margin-top: 1rem;
+  }
+
+  .subs-tarifa {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  /* Ajustes para el video principal */
+  .texto-bienvenida-p > span {
+    font-size: 1.5rem;
+  }
+
+  /* Ajustes para la sección entreno */
+  .contenido-entreno h2 {
+    font-size: 3rem;
+  }
+
+  .contenido-entreno p {
+    margin-right: 2rem;
+  }
+
+  .video-entreno {
+    display: none;
+  }
+
+  /* Ajustes para la sección contacto */
+  #contacto {
+    padding: 3rem 1rem;
+  }
+
+  .form-contacto {
+    width: 85%;
+  }
+
+  .form-contacto input,
+  .form-contacto textarea {
+    padding: 10px;
+  }
+
+  /* Ajustes para la sección feedback */
+  .feedback-contenido {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .feedback-tarjeta {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes para el texto del overlay */
+  .overlay h1 span {
+    font-size: 2.2rem;
+  }
+
+  /* Ajustes para el texto rotativo del overlay */
+  .texto-bienvenida-p > span {
+    font-size: 1rem;
+  }
+
+  /* Ajustes para los subtítulos */
+  h2 {
+    font-size: 2rem;
+    letter-spacing: 8px;
+  }
+
+  /* Ajustes para el formulario de contacto */
+  .form-contacto {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  /* Ajustes para secciones generales */
+  .secciones {
+    padding: 1.5rem 0.8rem;
+  }
+
+  /* Ajustes para el menú */
+  .menu li a {
+    padding: 8px 0;
+    font-size: 0.9rem;
+  }
+
+  /* Ajustes para las tarjetas de feedback */
+  .feedback-tarjeta {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Dispostivos pequeños */
+@media (max-width: 390px) {
+  /* Ocultar imágenes en móvil */
+  .image,
+  .imagen {
+    display: none;
+  }
+
+  /* Ajustes para el texto del overlay */
+  .overlay h1 span {
+    font-size: 3rem;
+  }
+
+  .texto-bienvenida-p {
+    height: 40px;
+  }
+
+  .texto-bienvenida-p > span {
+    font-size: 1.2rem;
+  }
+
+  /* Ajustes para redes sociales */
+  .redes {
+    left: 10px;
+    padding: 4px 8px;
+  }
+
+  .redes a {
+    font-size: 1rem;
+  }
+
+  /* Ajustes para tipografía */
+  h2 {
+    font-size: 2.5rem;
+    letter-spacing: 15px;
+  }
+
+  h3,
+  h4 {
+    font-size: 2rem;
+  }
+
+  /* Ajustes para navegación */
+  .ace-idio {
+    gap: 5px;
+  }
+
+  /* Ajustes para secciones generales */
+  .secciones {
+    padding: 15px 10px;
+  }
+
+  #comunidad {
+    margin-top: 20px;
+  }
+
+  /* Ajustes para la sección tarifas */
+  #tarifas {
+    height: auto;
+    padding: 30px 0;
+    margin-top: 20px;
+  }
+
+  .tarifas-contenedor {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .plan {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .plan h3 {
+    font-size: 1.5rem;
+  }
+
+  .precio {
+    font-size: 1.6rem;
+  }
+
+  .descri {
+    font-size: 0.9rem;
+  }
+
+  .plan ul {
+    margin-top: 0.5rem;
+  }
+
+  .plan li {
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .botones {
+    margin-top: 1rem;
+  }
+
+  .subs-tarifa {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  /* Ajustes para la sección entreno */
+  .contenido-entreno h2 {
+    font-size: 2rem;
+    letter-spacing: 10px;
+  }
+
+  .contenido-entreno h3 {
+    font-size: 1.5rem;
+  }
+
+  .contenido-entreno p {
+    font-size: 0.9rem;
+  }
+
+  .contenido-entreno ul li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .contenido-entreno ul li ul li {
+    font-size: 0.8rem;
+  }
+
+  .video-entreno {
+    display: none;
+  }
+
+  /* Ajustes para la sección contacto */
+  #contacto {
+    padding: 2rem 0.5rem;
+  }
+
+  #contacto h2 {
+    font-size: 2rem;
+    letter-spacing: 10px;
+  }
+
+  #contacto > p {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .form-contacto input,
+  .form-contacto textarea {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .form-contacto .boton-contacto {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  /* Ajustes para la sección feedback */
+  .feedback-contenido {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+
+  .feedback-tarjeta {
+    padding: 1rem;
+  }
+
+  .feedback-tarjeta h3 {
+    font-size: 1.2rem;
+  }
+
+  .feedback-texto {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+  .video-principal {
+    height: 100vh;
+  }
+
+  .overlay h1 span {
+    font-size: 2.5rem;
+  }
+
+  .texto-bienvenida-p > span {
+    font-size: 1rem;
+  }
+
+  #entreno {
+    padding: 1rem 0;
+  }
+
+  .contenido-entreno {
+    padding: 0.5rem;
+  }
+}

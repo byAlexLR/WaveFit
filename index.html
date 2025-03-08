@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Metadatos básicos -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- Título -->
+  <title>WaveFit</title>
+  <!-- Descripción para SEO -->
+  <meta name="description"
+    content="WaveFit ofrece planes de entrenamiento personalizados para ayudarte a alcanzar tus objetivos fitness.">
+  <!-- Palabras clave para SEO -->
+  <meta name="keywords" content="WaveFit, entrenamiento, fitness, comunidad, planes, personalizados">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="recursos/logo2.png" type="image/x-icon">
+  <!-- Hojas de estilo -->
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/media-queries.css" />
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- Cabecera -->
+  <header>
+    <nav class="header-nav">
+      <!-- Logo + Inicio-->
+      <div class="logo">
+        <h1 class="antes"><a href="#">WaveFit</a></h1>
+        <h1 class="despues"><a href="#">WF</a></h1>
+      </div>
+      <!-- Menú hamburguesa -->
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon"><i class="fa fa-bars"></i></label>
+      <!-- Enlaces de navegación principal -->
+      <ul class="menu">
+        <li><a href="#comunidad">Comunidad</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#tarifas">Tarifas</a></li>
+        <li><a href="#entreno">Entreno</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="ace-idio">
+        <!-- Selector de idioma -->
+        <div class="idioma">
+          <a href="index_en.html">EN</a>
+        </div>
+        <!-- Selector de acceder -->
+        <div class="acceder">
+          <a href="acceso.html">Acceder</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!-- Sección overlay con video de fondo -->
+    <section class="video-principal">
+      <video id="background-video" autoplay muted loop class="background-video">
+        <source src="recursos/open.mp4" type="video/mp4" />
+      </video>
+      <!-- Título con efecto -->
+      <div class="overlay">
+        <h1 class="texto-bienvenida">
+          <span>W</span><span>a</span><span>v</span><span>e</span><span>f</span><span>i</span><span>t</span>
+        </h1>
+        <!-- Textos animados -->
+        <div class="texto-bienvenida-p">
+          <span>es Superación</span>
+          <span>es Pasión</span>
+          <span>es Comunidad</span>
+          <span>es Disciplina</span>
+          <span>es Motivación</span>
+          <span>es Estilo de Vida</span>
+          <span>es Progreso</span>
+          <span>es Inspiración</span>
+          <span>es Salud</span>
+        </div>
+      </div>
+      <!-- Barra lateral de redes sociales -->
+      <div class="redes">
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/WaveFitOf" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="https://www.x.com/WaveFitOf" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com/@WaveFitOf" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Sección de comunidad -->
+    <section id="comunidad" class="secciones">
+      <h2>Comunidad</h2>
+      <p>Únete a la comunidad de <strong>WaveFit</strong> y lleva tu <strong>entrenamiento</strong> y
+        <strong>bienestar</strong> al siguiente nivel. Conéctate con personas apasionadas por el
+        <strong>fitness</strong> y el crecimiento personal, en un ambiente de <strong>motivación</strong>, apoyo y
+        superación constante.
+      </p>
+      <p>Comparte tus logros, aprende nuevas técnicas, resuelve dudas y ayuda a otros en su camino. En
+        <strong>WaveFit</strong>, sabemos que alcanzar el éxito es más fácil y gratificante cuando estás rodeado de
+        personas que, como tú, buscan ser la mejor versión de sí mismas cada día.
+      </p>
+      <!-- Formulario de suscripción al boletín -->
+      <div class="subs-comun">
+        <h4>Suscríbete a nuestro boletín</h4>
+        <p>Recibirás noticias, promociones y ofertas exclusivas.</p>
+        <form action="#" method="POST" class="subs-formu">
+          <input type="email" id="email" name="email" placeholder="Mi email" required
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|es|net|org|edu|gov)$" />
+          <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+        <p class="sub-cancel"><i class="fa-solid fa-circle-info"></i> Puedes cancelar tu suscripción cuando quieras
+          desde el email.</p>
+      </div>
+    </section>
+    <!-- Sección sobre mí con imagen -->
+    <section id="sobre-mi" class="secciones">
+      <div class="imagen">
+        <img src="recursos/foto.jpg" alt="Foto sobre mí">
+      </div>
+      <div class="contenido">
+        <h2>Sobre Mí</h2>
+        <p>Después de años sin poder practicar <strong>deporte</strong> debido a una lesión, enfrenté mi mayor desafío:
+          una operación de rodilla. En lugar de rendirme, trabajé con esfuerzo y disciplina, y un año
+          después estaba de vuelta en la <strong>competición</strong>, logrando tres primeros puestos consecutivos.</p>
+        <p>Hoy mi enfoque ha evolucionado. Aunque las competiciones ya no son mi prioridad, mi objetivo sigue siendo
+          <strong>mejorar mi rendimiento</strong>, fortalecer mi cuerpo y optimizar mi salud. Estoy construyendo una
+          base sólida para, en el futuro, regresar al máximo nivel.
+        </p>
+        <p>Mi experiencia me ha enseñado que con <strong>constancia</strong>, <strong>trabajo</strong> y la estrategia
+          adecuada, se pueden superar cualquier obstáculo. Eso es lo que quiero transmitir a cada persona que entrena
+          conmigo en <strong>WaveFit</strong>, ayudándolas a alcanzar su mejor versión.</p>
+        <!-- Cita -->
+        <blockquote class="cita">
+          "No importa de dónde vengas, sino hacia dónde estás dispuesto a llegar." <span class="firma">- WaveFit</span>
+        </blockquote>
+      </div>
+    </section>
+    <!-- Sección de planes y tarifas -->
+    <section id="tarifas" class="secciones">
+      <h2>Planes y Tarifas</h2>
+      <p>Entrenamientos personalizados para cualquier nivel, desde principiantes hasta atletas avanzados.</p>
+      <!-- Contenedor de tarjetas de planes -->
+      <div class="tarifas-contenedor">
+        <!-- Plan básico mensual -->
+        <div class="plan plan-uno">
+          <h3>1 mes</h3>
+          <p class="precio">9.99€/mes</p>
+          <p class="descri">Prueba gratuita durante 7 días</p>
+          <ul>
+            <li>Plan de entrenamiento básico</li>
+            <li>Seguimiento semanal</li>
+            <li>Acceso a la comunidad de deportistas</li>
+          </ul>
+          <div class="botones">
+            <button class="subs-tarifa">Suscribirse</button>
+          </div>
+        </div>
+        <!-- Plan trimestral con descuento -->
+        <div class="plan plan-dos">
+          <h3>3 meses</h3>
+          <p class="descuento">29.97€</p>
+          <p class="precio">26.97€/trimestre</p>
+          <p class="descri">Ahorra un 10%</p>
+          <ul>
+            <li>Todas las características anteriores</li>
+            <li>Plan personalizado según tu nivel</li>
+            <li>Acceso a estrategias personalizadas para maximizar tus resultados</li>
+          </ul>
+          <div class="botones">
+            <button class="subs-tarifa">Suscribirse</button>
+          </div>
+        </div>
+        <!-- Plan anual con mayor descuento -->
+        <div class="plan plan-tres">
+          <h3>12 meses</h3>
+          <p class="descuento">119.88€</p>
+          <p class="precio">95.88€/año</p>
+          <p class="descri">Ahorra un 20%</p>
+          <ul>
+            <li>Todas las características anteriores</li>
+            <li>Entrenador personal exclusivo</li>
+            <li>Evaluaciones físicas mensuales</li>
+          </ul>
+          <div class="botones">
+            <button class="subs-tarifa">Suscribirse</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Sección de ejemplo de entrenamiento -->
+    <section id="entreno" class="secciones">
+      <div class="contenido-entreno">
+        <h2>Entreno</h2>
+        <p>Nº 250305</p>
+        <!-- Parte de fuerza -->
+        <h3>A) STRENGTH</h3>
+        <ul>
+          <li><strong>SEARCH 5 HEAVY REPS. IN SQUAT CLEAN</strong></li>
+          <li><strong>EVERY 1'30" X 5 ROUNDS:</strong> 5 Squat Clean @80% from first point</li>
+          <li><strong>EMOM 12'</strong>
+            <ul>
+              <li>1ST: 12 Gorilla Rows</li>
+              <li>2ND: Hang Hold</li>
+            </ul>
+          </li>
+        </ul>
+        <!-- Parte de acondicionamiento -->
+        <h3>B) METCON</h3>
+        <ul>
+          <li><strong>EMOM 20'</strong>
+            <ul>
+              <li>1ST: 15 2DB Power Clean</li>
+              <li>2ND: 6 Shuttle Run</li>
+              <li>3RD: 20 Toes-to-Bar</li>
+              <li>4TH: Rest</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- Video demostrativo lateral -->
+      <div class="video-entreno">
+        <video class="lateral-video-entreno" autoplay muted loop>
+          <source src="recursos/entreno2.mp4" type="video/mp4" alt="Video del Squat Clean">
+        </video>
+      </div>
+    </section>
+    <!-- Sección de contacto con formulario -->
+    <section id="contacto" class="secciones">
+      <h2>Contacto</h2>
+      <p>¡Hablemos! Contáctame para más información sobre los planes.</p>
+      <form class="form-contacto" action="mailto:info@wavefit.com" method="post" enctype="text/plain">
+        <input type="text" id="nombre" name="nombre" placeholder="Mi nombre" required>
+        <input type="email" id="email" name="email" placeholder="Mi email" required
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|es|net|org|edu|gov)$" />
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+        <button type="submit" class="boton-contacto">Enviar mensaje</button>
+      </form>
+    </section>
+    <!-- Sección de feedback de clientes -->
+    <section id="feedback" class="secciones">
+      <h2>Feedback</h2>
+      <div class="feedback-contenido">
+        <!-- Feedback 1 -->
+        <div class="feedback-tarjeta">
+          <h3>María García</h3>
+          <p class="feedback-socio">Cliente desde 2025</p>
+          <p class="feedback-texto">"El programa de entrenamiento personalizado ha transformado completamente mi estilo
+            de vida. Los resultados son increíbles."</p>
+          <div class="puntua">★★★★★</div>
+        </div>
+        <!-- Feedback 2 -->
+        <div class="feedback-tarjeta">
+          <h3>Carlos Ruiz</h3>
+          <p class="feedback-socio">Cliente desde 2023</p>
+          <p class="feedback-texto">"La atención personalizada y el seguimiento constante hacen que cada entrenamiento
+            sea efectivo y motivador."</p>
+          <div class="puntua">★★★★★</div>
+        </div>
+        <!-- Feedback 3 -->
+        <div class="feedback-tarjeta">
+          <h3>Laura Martín</h3>
+          <p class="feedback-socio">Cliente desde 2021</p>
+          <p class="feedback-texto">"Excelente metodología y ambiente. He conseguido superar mis objetivos más rápido de
+            lo que esperaba."</p>
+          <div class="puntua">★★★★★</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Pie de página -->
+  <footer>
+    <!-- Información de copyright -->
+    <div class="copy">
+      <p>
+        WaveFit &copy; 2025. Todos los derechos reservados. Diseñado por
+        <a href="https://github.com/byAlexLR" target="_blank" rel="noopener">ByAlexLR</a>
+      </p>
+    </div>
+    <!-- Iconos de redes sociales -->
+    <div class="redes-footer">
+      <ul>
+        <li>
+          <a href="https://www.instagram.com/WaveFitOf" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href="https://www.x.com/WaveFitOf" target="_blank" rel="noopener" aria-label="X">
+            <i class="fa-brands fa-x-twitter"></i></a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com/@WaveFitOf" target="_blank" rel="noopener" aria-label="TikTok">
+            <i class="fa-brands fa-tiktok"></i></a>
+        </li>
+      </ul>
+    </div>
+    <!-- Enlaces a páginas legales -->
+    <div class="terminos">
+      <p>
+        <a href="#terminos" rel="noopener">Términos y Condiciones</a> |
+        <a href="#politica" rel="noopener">Política de Privacidad</a> |
+        <a href="#cookies" rel="noopener">Política de Cookies</a> |
+        <a href="#accesibilidad" rel="noopener">Contáctenos</a>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

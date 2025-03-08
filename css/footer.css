@@ -1,0 +1,55 @@
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  background-color: var(--color-oscuro);
+  color: var(--color-claro);
+  padding: var(--border-radius-m) 0;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto;
+}
+
+/* Estilos para los enlaces dentro del footer */
+footer a {
+  color: var(--color-claro);
+  transition: color var(--transition-normal);
+}
+
+footer a:hover {
+  color: var(--color-acento);
+}
+
+/* Estilos para el copyright, redes sociales y terminos y condiciones */
+.copy, .redes-footer, .terminos {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--color-claro);
+  font-size: 12px;
+  margin: 20px;
+}
+
+/* Estilos para el copyright */
+.copy a {
+  font-weight: 500;
+}
+
+/* Estilos para las redes sociales */
+.redes-footer {
+  gap: 20px;
+}
+
+/* Estilo para la lista de redes sociales */
+.redes-footer ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+/* Estilo para los iconos de las redes sociales */
+.redes-footer i {
+  font-size: 0.8rem;
+}

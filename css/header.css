@@ -1,0 +1,257 @@
+/* Estilos para el encabezado */
+header {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  height: 52px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Estilos del menú */
+.header-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: var(--spacing-m);
+  background-color: var(--color-claro);
+}
+
+/* Estilos de los enlaces */
+.header-nav a {
+  color: var(--color-oscuro);
+  transition: color var(--transition-normal);
+}
+
+/* Estilos del logo */
+.logo {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 40px;
+}
+
+/* Estilo del texto del logo */
+h1 a {
+  font-family: var(--fuente-principal);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Animación del título completo (WaveFit) */
+.antes {
+  display: inline-block;
+  opacity: 1;
+  animation: moveWaveFit 12s ease-in-out infinite;
+}
+
+/* Animación del título abreviado (WF) */
+.despues {
+  position: absolute;
+  display: inline-block;
+  opacity: 0;
+  animation: moveWF 12s ease-in-out infinite;
+  letter-spacing: 2px;
+}
+
+/* Keyframes para la animación del logo completo */
+@keyframes moveWaveFit {
+  0%,
+  20%,
+  80%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  40%,
+  60% {
+    transform: scale(0.25);
+    opacity: 0;
+  }
+}
+
+/* Keyframes para la animación del logo abreviado */
+@keyframes moveWF {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    color: #ffffff72;
+    transform: scale(0.5) rotate(5deg);
+    opacity: 0;
+  }
+  40% {
+    color: var(--color-oscuro);
+    transform: scale(1) rotate(15deg);
+    opacity: 1;
+  }
+  60% {
+    color: var(--color-oscuro);
+    transform: scale(1) rotate(-15deg);
+    opacity: 1;
+  }
+  80% {
+    color: #ffffff72;
+    transform: scale(0.5) rotate(-5deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+/* Lista de navegación principal */
+.menu {
+  display: flex;
+  font-size: 14px;
+  gap: var(--spacing-mg);
+  list-style: none;
+}
+
+/* Elementos de la lista de navegación */
+.menu li {
+  transition: scale var(--transition-rapido);
+  position: relative;
+}
+
+/* Enlaces dentro del menú principal */
+.menu li a {
+  display: inline-block;
+  padding: var(--spacing-mp);
+  border-bottom: 1.2px solid transparent;
+  transition: border-bottom var(--transition-despacio);
+}
+
+/* Efecto de escala al pasar el cursor */
+.menu li:hover {
+  scale: 1.2;
+}
+
+/* Efecto de subrayado al pasar el cursor */
+.menu li a:hover {
+  border-bottom: 1.2px solid var(--color-oscuro);
+}
+
+/* Contenedor de idioma y acceso */
+.ace-idio {
+  display: flex;
+  gap: var(--spacing-mp);
+  align-items: center;
+}
+
+/* Botón de acceso con efecto de relleno */
+.acceder {
+  display: inline-block;
+  background-color: transparent;
+  border: 1.2px solid var(--color-oscuro);
+  padding: 0;
+  border-radius: var(--border-radius-g) var(--border-radius-m);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Enlace dentro del botón de acceso */
+.acceder a {
+  display: inline-block;
+  position: relative;
+  padding: 8px 24px;
+  z-index: 2;
+  transition: color var(--transition-normal);
+}
+
+/* Efecto de relleno del botón */
+.acceder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-oscuro);
+  transition: left var(--transition-normal);
+  z-index: 1;
+}
+
+/* Animación del relleno al pasar el cursor */
+.acceder:hover::before {
+  left: 0;
+}
+
+/* Cambio de color del texto al activar el hover */
+.acceder:hover a {
+  color: var(--color-claro);
+}
+
+/* Selector de idioma */
+.idioma {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo del botón de idioma */
+.idioma a {
+  background-color: var(--color-oscuro);
+  color: var(--color-claro);
+  padding: 8px;
+  border-radius: var(--border-radius-mg);
+  border: solid 1.2px transparent;
+  transition: all var(--transition-normal);
+}
+
+/* Efecto invertido al pasar el cursor */
+.idioma a:hover {
+  border-color: var(--color-oscuro);
+  background-color: var(--color-claro);
+  color: var(--color-oscuro);
+}
+
+/* Control del menú hamburguesa (Móvil y tablets)*/
+#menu-toggle {
+  display: none; /* Por defecto oculto */
+}
+
+/* Icono del menú hamburguesa */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: var(--spacing-mp);
+}
+
+/* Estilo del menú desplegable */
+#menu-toggle:checked + .menu-icon + .menu {
+  position: absolute;
+  top: 52px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: var(--spacing-m) 0;
+  background-color: var(--color-claro);
+  box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+}
+
+/* Elementos del menú desplegable */
+#menu-toggle:checked + .menu-icon + .menu li {
+  margin: 4px 0;
+  width: 100%;
+  text-align: center;
+}
+/* Enlaces en el menú desplegable */
+#menu-toggle:checked + .menu-icon + .menu li a {
+  border: 0px solid transparent;
+  padding: var(--spacing-p);
+  display: block;
+}

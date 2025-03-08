@@ -1,0 +1,663 @@
+/* ===== ESTRUCTURA PRINCIPAL ===== */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ===== SECCIÓN OVERLAY CON VIDEO ===== */
+.video-principal {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Video de fondo a pantalla completa */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Capa oscura sobre el video para mejorar legibilidad */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--color-claro);
+  padding: 0 1rem;
+}
+
+/* Animación de letras del título principal */
+.overlay span {
+  display: inline-block;
+  font-size: 6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  animation: onda 2s ease-in-out infinite;
+}
+
+/* Retrasos escalonados para cada letra */
+.overlay h1 > span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.overlay h1 > span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.overlay h1 > span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.overlay h1 > span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.overlay h1 > span:nth-child(6) {
+  animation-delay: 1s;
+}
+.overlay h1 > span:nth-child(7) {
+  animation-delay: 1.2s;
+}
+
+/* Animación de ondulación para el título */
+@keyframes onda {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Contenedor para textos animados secundarios */
+.texto-bienvenida-p {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 60px;
+}
+
+/* Textos animados secundarios */
+.texto-bienvenida-p > span {
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: absolute;
+  opacity: 0;
+  box-shadow: 0px 60px 25px -20px rgba(0, 0, 0, 0.5);
+  animation: aparecer 13.5s infinite;
+  animation-fill-mode: forwards;
+}
+
+/* Retrasos para cada texto secundario */
+.texto-bienvenida-p > span:nth-child(2) {
+  animation-delay: 1.5s;
+}
+.texto-bienvenida-p > span:nth-child(3) {
+  animation-delay: 3s;
+}
+.texto-bienvenida-p > span:nth-child(4) {
+  animation-delay: 4.5s;
+}
+.texto-bienvenida-p > span:nth-child(5) {
+  animation-delay: 6s;
+}
+.texto-bienvenida-p > span:nth-child(6) {
+  animation-delay: 7.5s;
+}
+.texto-bienvenida-p > span:nth-child(7) {
+  animation-delay: 9s;
+}
+.texto-bienvenida-p > span:nth-child(8) {
+  animation-delay: 10.5s;
+}
+.texto-bienvenida-p > span:nth-child(9) {
+  animation-delay: 12s;
+}
+
+/* Animación de aparición y desaparición */
+@keyframes aparecer {
+  0%,
+  18% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  20%,
+  30% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  30%,
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* ===== BARRA LATERAL DE REDES SOCIALES ===== */
+.redes {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #00000030;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  z-index: 5;
+}
+
+.redes ul {
+  list-style: none;
+}
+
+.redes li {
+  margin: 1rem 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Efecto de agrandamiento al pasar el cursor */
+.redes li:hover {
+  transform: scale(1.2);
+}
+
+.redes a {
+  color: var(--color-claro);
+  font-size: 1.5rem;
+}
+
+/* Efecto de cambio de color */
+.redes a:hover {
+  color: var(--color-acento);
+}
+
+/* ===== ESTILOS GENERALES PARA SECCIONES ===== */
+.secciones {
+  padding: 5rem 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Alternancia de colores para secciones */
+.secciones:nth-child(odd) {
+  background-color: var(--color-oscuro);
+  color: var(--color-claro);
+}
+
+.secciones:nth-child(even) {
+  background-color: var(--color-claro);
+  color: var(--color-oscuro);
+}
+
+/* ===== SECCIÓN COMUNIDAD ===== */
+#comunidad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 80vh;
+}
+
+#comunidad > p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Formulario de suscripción */
+.subs-comun {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+
+.subs-comun h4 {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+  letter-spacing: 8px;
+}
+
+.subs-comun p {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.subs-formu {
+  display: flex;
+  border: 2px solid var(--color-acento);
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.subs-formu input {
+  flex: 1;
+  border: none;
+  padding: 0.8rem 1rem;
+  background-color: var(--color-input);
+  transition: background-color 0.3s ease;
+  outline: none;
+}
+
+.subs-formu input:focus {
+  background-color: var(--color-claro);
+}
+
+.subs-formu button {
+  background-color: var(--color-acento);
+  border: none;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subs-formu button:hover {
+  background-color: var(--color-secundario);
+}
+
+.subs-comun .sub-cancel {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  gap: 4px;
+  color: #666;
+}
+
+.subs-comun .sub-cancel i {
+  margin-right: 5px;
+}
+
+/* ===== SECCIÓN SOBRE MÍ ===== */
+#sobre-mi {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#sobre-mi .imagen,
+#sobre-mi .contenido {
+  flex: 1;
+}
+
+.imagen {
+  position: relative;
+  height: 100vh;
+}
+
+.imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Degradado oscuro sobre la imagen */
+.imagen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      to top,
+      var(--color-oscuro) 0%,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0) 80%,
+      var(--color-oscuro) 100%
+    ),
+    linear-gradient(
+      to right,
+      var(--color-oscuro) 0%,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0) 80%,
+      var(--color-oscuro) 100%
+    );
+}
+
+.contenido {
+  padding: 2rem;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+.contenido h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contenido p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+/* Estilo para citas destacadas */
+.contenido .cita {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.contenido .cita .firma {
+  font-size: 1.2rem;
+  font-weight: normal;
+  font-style: oblique;
+  color: var(--color-acento);
+  margin-left: 0.5rem;
+}
+
+/* ===== SECCIÓN TARIFAS ===== */
+#tarifas {
+  height: auto;
+  padding-bottom: 40px;
+}
+
+#tarifas > p {
+  font-size: 1.2rem;
+}
+
+/* Grid para las tarjetas de planes */
+.tarifas-contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Tarjeta de plan individual */
+.plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-radius: 14px;
+  background-color: var(--color-oscuro);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: var(--color-claro);
+}
+
+.plan:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.2);
+}
+
+.plan h3 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  transition: scale 0.2s ease;
+}
+
+.descri {
+  font-size: 1rem;
+  color: var(--color-acento);
+}
+
+.precio {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.descuento {
+  font-size: 0.875rem;
+  opacity: 0.75;
+  text-decoration: line-through;
+}
+
+.plan ul {
+  padding: 0;
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.plan li {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  opacity: 0.8;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Botones de suscripción */
+.botones {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.botones:hover {
+  transform: scale(1.04);
+}
+
+.subs-tarifa {
+  background-color: var(--color-claro);
+  color: var(--color-oscuro);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 18px;
+  font-family: var(--fuente-principal);
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.subs-tarifa:hover {
+  background-color: var(--color-secundario);
+}
+
+/* ===== SECCIÓN ENTRENO ===== */
+#entreno {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.contenido-entreno,
+.video-entreno {
+  flex: 1;
+}
+
+/* Contenido del entreno */
+.contenido-entreno {
+  padding: 5rem;
+  text-align: left;
+  color: var(--color-claro);
+}
+
+.contenido-entreno h2 {
+  text-align: center;
+}
+
+.contenido-entreno h3 {
+  color: var(--color-acento);
+  margin-top: 1rem;
+}
+
+.contenido-entreno p {
+  display: flex;
+  text-align: center;
+  justify-content: right;
+  margin-right: 6rem;
+  margin-bottom: 0.9rem;
+  font-size: 1.1rem;
+  text-decoration: underline;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.contenido-entreno ul li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  position: relative;
+  margin-bottom: 0.8rem;
+  margin-left: 1.25rem;
+}
+
+/* Video lateral de demostración */
+.video-entreno {
+  position: relative;
+  height: 100vh;
+}
+
+.lateral-video-entreno {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Degradado para el vídeo */
+.video-entreno::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to left,
+    var(--color-oscuro) 0%,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(0, 0, 0, 0) 80%,
+    var(--color-oscuro) 100%
+  );
+}
+
+/* ===== SECCIÓN CONTACTO ===== */
+#contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+}
+
+#contacto > p {
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Formulario de contacto */
+.form-contacto {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+  width: 90%;
+  max-width: 600px;
+}
+
+/* Campos del formulario */
+.form-contacto input,
+.form-contacto textarea {
+  padding: 0.8rem;
+  border: 1px solid var(--color-oscuro);
+  border-radius: 5px;
+  background-color: var(--color-input);
+}
+
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+  background-color: var(--color-claro);
+  outline: 1px solid var(--color-acento);
+}
+
+/* Botón de envío */
+.form-contacto .boton-contacto {
+  padding: 1rem;
+  background-color: var(--color-acento);
+  color: var(--color-oscuro);
+  border: 1px solid var(--color-oscuro);
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-contacto .boton-contacto:hover {
+  background-color: var(--color-secundario);
+  transform: translateY(-2px);
+}
+
+/* ===== SECCIÓN FEEDBACK ===== */
+#feedback {
+  background-color: var(--color-oscuro);
+  color: var(--color-claro);
+  padding: 4rem 2rem;
+}
+
+.feedback-contenido {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Tarjeta de feedback */
+.feedback-tarjeta {
+  background-color: var(--color-claro);
+  color: var(--color-oscuro);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feedback-tarjeta:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Nombre del cliente */
+.feedback-tarjeta h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-oscuro);
+}
+
+/* Tiempo de socio */
+.feedback-socio {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+/* Texto del feedback */
+.feedback-texto {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+/* Estrellas */
+.puntua {
+  color: var(--color-acento);
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}

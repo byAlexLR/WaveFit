@@ -1,0 +1,172 @@
+/* Pantallas medianas (Desktops y laptops) */
+@media (max-width: 1439px) and (min-width: 960px) {
+  /* Ajustes para las secciones de acceso y registro */
+  .seccion {
+    padding: 3rem 2rem;
+  }
+
+  /* Ajuste del contenido */
+  .contenido {
+    padding: 2rem;
+  }
+}
+
+/* Pantallas medianas a pequeñas (Tablets grandes y dispositivos similares) */
+@media (max-width: 959px) {
+  /* Ajustes para las secciones de acceso y registro */
+  .seccion {
+    flex-direction: column;
+    height: auto;
+    min-height: 80vh;
+    padding: 2rem 1rem;
+  }
+
+  /* Configuración de las imágenes para adaptarse al nuevo layout */
+  .imagen,
+  .imagen2 {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    margin-bottom: 2rem;
+  }
+
+  /* Ajuste del contenido para ocupar el ancho disponible */
+  .contenido {
+    width: 100%;
+    max-width: 500px;
+    padding: 1.5rem;
+  }
+
+  /* Ajuste del formulario para ocupar el ancho disponible */
+  .form-acceso {
+    width: 100%;
+  }
+
+  /* Ajustes del pie de página */
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Espaciado uniforme para el footer */
+  .copy,
+  .redes-footer,
+  .terminos {
+    margin: 5px;
+  }
+}
+
+/* Tablets y dispositivos medianos */
+@media (min-width: 391px) and (max-width: 768px) {
+  /* Ajustes para las secciones de acceso y registro */
+  .seccion {
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Ocultar las imágenes en este tamaño */
+  .imagen,
+  .imagen2 {
+    display: none;
+  }
+
+  /* Centrado y ajuste del contenido principal */
+  .contenido {
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Estilos específicos para el título */
+  .contenido h2 {
+    font-size: 2.5rem;
+    padding-left: 20px;
+    letter-spacing: 15px;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  /* Ajustes de los inputs */
+  .form-acceso input {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  /* Ajuste del botón */
+  .boton-acceder {
+    padding: 12px;
+  }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  /* Ajustes para las secciones de acceso y registro */
+  .seccion {
+    padding: 1.2rem 0.8rem;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Ocultar las imágenes en este tamaño */
+  .imagen,
+  .imagen2 {
+    display: none;
+  }
+
+  /* Centrado y ajuste del contenido principal */
+  .contenido {
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: 12px;
+    margin: 0 auto;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  /* Estilos específicos para el título */
+  .contenido h2 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    padding-left: 0;
+    letter-spacing: 6px;
+  }
+
+  /* Ajustes de formulario */
+  .form-acceso label {
+    font-size: 0.9rem;
+  }
+
+  /* Ajustes de los inputs */
+  .form-acceso input {
+    padding: 8px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+  }
+
+  /* Botón más pequeño */
+  .boton-acceder {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  /* Ajustes del pie de página */
+  footer {
+    padding: 10px 0;
+  }
+
+  /* Reducción del tamaño de los términos */
+  .terminos a {
+    font-size: 0.8rem;
+  }
+
+  /* Espaciado uniforme para el footer */
+  .copy,
+  .redes-footer,
+  .terminos {
+    margin: 2px 10px;
+  }
+}

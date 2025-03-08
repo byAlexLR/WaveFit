@@ -1,0 +1,91 @@
+/* Importación de fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colores */
+  --color-oscuro: #000;
+  --color-claro: #fff;
+  --color-acento: #ffe6b8;
+  --color-input: #f8f8f8;
+  --color-secundario: #ffd699;
+  --color-translucido: rgba(0, 0, 0, 0.3);
+
+  /* Fuentes */
+  --fuente-principal: "Poppins", Arial, Helvetica, sans-serif;
+  --fuente-titulos: "Bebas Neue", sans-serif;
+
+  /* Espacios */
+  --spacing-mp: 0.5rem;  /* Muy pequeño: 8px */
+  --spacing-p: 1rem;     /* Pequeño: 16px */
+  --spacing-m: 1.5rem;   /* Mediano: 24px */
+  --spacing-g: 2rem;     /* Grande: 32px */
+  --spacing-mg: 3rem;    /* Muy grande: 48px */
+
+  /* Bordes redondeados */
+  --border-radius-p: 5px;   /* Pequeño */
+  --border-radius-m: 8px;   /* Mediano */
+  --border-radius-g: 20px;  /* Grande */
+  --border-radius-mg: 50%;  /* Circular */
+
+  /* Transiciones */
+  --transition-rapido: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-despacio: 0.8s ease;
+}
+
+/* Estructura base con Grid */
+body {
+  display: grid;
+  grid-template-rows: 52px 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  font-family: var(--fuente-principal);
+  background-color: var(--color-claro);
+  min-height: 100vh;
+}
+
+/* Asignación de las áreas del grid */
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* Estilos para títulos principales */
+h2 {
+  font-family: var(--fuente-titulos);
+  font-size: 6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 60px;
+}
+
+/* Estilos para subtítulos */
+h3,
+h4 {
+  font-family: var(--fuente-titulos);
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+/* Estilos base para enlaces */
+a {
+  text-decoration: none;
+  transition: color var(--transition-normal);
+}
