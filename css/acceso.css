@@ -85,6 +85,16 @@ main {
     color: var(--color-acento);
 }
 
+/* Configuración de recordarme y recuperar contraseña */
+.contenido .check-recuperar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px 0;
+  width: 100%;
+  max-width: 600px;
+}
+
 /* Configuración del formulario de acceso */
 .form-acceso {
   display: flex;
