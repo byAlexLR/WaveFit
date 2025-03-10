@@ -184,6 +184,11 @@
     min-height: auto;
   }
 
+  /* Quita el vídeo */
+  .video-entreno {
+    display: none;
+  }
+  
   .contenido-entreno {
     padding: 0.5rem 1rem;
     order: 2;
