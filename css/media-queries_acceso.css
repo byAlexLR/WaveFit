@@ -1,7 +1,8 @@
 /* Pantallas medianas (Desktops y laptops) */
-@media (max-width: 1439px) and (min-width: 960px) {
+@media (max-width: 1439px) and (min-width: 1220px) {
   /* Ajustes para las secciones de acceso y registro */
   .seccion {
+    min-height: 100vh;
     padding: 3rem 2rem;
   }
 
@@ -9,25 +10,30 @@
   .contenido {
     padding: 2rem;
   }
+
+  /* Estilos específicos para el título */
+  .contenido h2 {
+    font-size: 2.5rem;
+    padding-left: 20px;
+    letter-spacing: 15px;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 }
 
 /* Pantallas medianas a pequeñas (Tablets grandes y dispositivos similares) */
-@media (max-width: 959px) {
+@media (max-width: 1219px) and (min-width: 769px) {
   /* Ajustes para las secciones de acceso y registro */
   .seccion {
-    flex-direction: column;
-    height: auto;
-    min-height: 80vh;
-    padding: 2rem 1rem;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
   }
 
-  /* Configuración de las imágenes para adaptarse al nuevo layout */
+  /* Ocultar las imágenes en este tamaño */
   .imagen,
   .imagen2 {
-    width: 100%;
-    max-width: 500px;
-    height: 300px;
-    margin-bottom: 2rem;
+    display: none;
   }
 
   /* Ajuste del contenido para ocupar el ancho disponible */
@@ -35,6 +41,15 @@
     width: 100%;
     max-width: 500px;
     padding: 1.5rem;
+  }
+
+  /* Estilos específicos para el título */
+  .contenido h2 {
+    font-size: 2.5rem;
+    padding-left: 20px;
+    letter-spacing: 15px;
+    text-align: center;
+    margin-bottom: 2rem;
   }
 
   /* Ajuste del formulario para ocupar el ancho disponible */
@@ -57,7 +72,7 @@
 }
 
 /* Tablets y dispositivos medianos */
-@media (min-width: 391px) and (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 391px) {
   /* Ajustes para las secciones de acceso y registro */
   .seccion {
     min-height: 100vh;
@@ -99,6 +114,19 @@
   .boton-acceder {
     padding: 12px;
   }
+
+  /* Ajustes del pie de página */
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Espaciado uniforme para el footer */
+  .copy,
+  .redes-footer,
+  .terminos {
+    margin: 5px;
+  }
 }
 
 /* Pantallas pequeñas (móviles) */
@@ -124,7 +152,7 @@
     border-radius: 12px;
     margin: 0 auto;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
   /* Estilos específicos para el título */
@@ -155,7 +183,8 @@
 
   /* Ajustes del pie de página */
   footer {
-    padding: 10px 0;
+    flex-direction: column;
+    text-align: center;
   }
 
   /* Reducción del tamaño de los términos */
