@@ -517,6 +517,20 @@ main {
   margin-left: 1.25rem;
 }
 
+.list-entreno {
+  list-style: none;
+}
+
+.list-entreno li {
+  position: relative;
+  padding-left: 0.2rem;
+}
+
+.list-entreno li ul {
+  position: relative;
+  padding-left: 1.2rem;
+}
+
 /* Video lateral de demostración */
 .video-entreno {
   position: relative;
